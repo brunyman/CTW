@@ -1,0 +1,149 @@
+#Chat messages. Full color and format codes support.
+#Codes: http://minecraft.gamepedia.com/Formatting_codes#Color_codes
+ChatMessages:
+    Games-CMD-Usage: '&cCommand usage: &6/games'
+    Stats-CMD-Usage: '&cCommand usage: &6/stats'
+    Reload-CMD-Complete: '&aConfig and language file reload complete!'
+    Reload-CMD-Failed: '&cReload failed! Check server logs.'
+    Sign-Removed: '&aGame sign removed!'
+    Sign-Created: '&aSign created!'
+    Sign-Failed: '&cFailed to add server sign! Could not find this server name listed in CTW config.'
+    Remove-Sign-Tip: '&6Tip! To destroy the sign you must sneak.'
+    No-Permission: '&cYou do not have permission!'
+    Joining-Game: '&6Joining the game! Please wait...'
+    
+    
+#Stats format, displayed in chat. Each line represents a new row. Full color and format codes support.
+#Codes: http://minecraft.gamepedia.com/Formatting_codes#Color_codes
+#Variables: 
+#    %score% - will be replaced by player score.
+#    %meleeKills% - will be replaced by the player melee kills.
+#    %bowKills% - will be replaced by the player bow kills.
+#    %totalKills% - will be replaced by the total player kills (bow + melee).
+#    %distance% - will be replaced by the player max distance a bow kill took place.
+#    %wools% - will be replaced by the player wools placed count.
+#Below this the server will add the players achievements.
+ChatStats:
+    - ' '
+    - ' &d&lYour Stats'
+    - '   &fScore:&d %score%'
+    - '   &fMelee kills:&d %meleeKills% &7| &fBow kills:&d %bowKills% &7| &fTotal:&d %totalKills%'
+    - '   &fBow distance kill:&d %distance% &fblocks.'
+    - '   &fWools Placed:&d %wools%'
+    - ' &d&lYour Achievements'
+    
+    
+#Game signs format. Full color and format codes support.
+#Codes: http://minecraft.gamepedia.com/Formatting_codes#Color_codes
+#Variables: 
+#    %number% - will be replaced by the game number.
+#    %mapName% - will be replaced by the map name.
+#    %onlinePlayers% - will be replaced by the number of players in that game.
+#    %maxPlayers% - will be replaced by the max amount of players that can join a game.
+SignsLayout:
+    #Keep in mind that this must fit on a sign line.
+    GameLoading: '&6&lLoading...'
+    GameClosed: '&4CLOSED'
+    #Initial state is used when the server starts/reboots or when you create a sign.
+    Initial-State:
+        Line1: '&5&l[Game %number%]'
+        Line2: 'Current Map:'
+        Line3: '&6&lLoading...'
+        Line4: '&0--&7/&0--'
+    #Running state is used after the server starts to update the signs.
+    Running-State:
+        Line1: '&5&l[Game %number%]'
+        Line2: 'Current Map:'
+        Line3: '%mapName%'
+        Line4: '&0%onlinePlayers%&7/&0%maxPlayers%'
+
+        
+#Games Menu GUI format. Full color and format codes support.
+#Codes: http://minecraft.gamepedia.com/Formatting_codes#Color_codes
+#Variables: 
+#    %number% - will be replaced by the game number.
+#    %mapName% - will be replaced by the map name.
+#    %onlinePlayers% - will be replaced by the number of players in that game.
+#    %maxPlayers% - will be replaced by the max amount of players that can join a game.
+GamesMenu:
+    #The inventory title
+    InventoryTitle: 'Games'
+    #This format is used for each game that will be added inside the GUI.
+    GameStats:
+        DisplayName: '&5&lCTW Game %number%'
+        Lore:
+            - ' '
+            - '&7Map: %mapName%'
+            - '&7Players: &e%onlinePlayers%&7/&6%maxPlayers%'
+            - ' '
+            - '&dClick to join!'
+        GameClosed: '&4&lCLOSED'
+        
+        
+#Hotbar items format. Full color and format codes support.
+#Codes: http://minecraft.gamepedia.com/Formatting_codes#Color_codes
+HotbarItems:
+    #Items titles/names.
+    GamesMenu: '&5&lGames'
+    Stats: '&e&lStats'
+    Store: '&a&lDonationShop'
+    Hub: '&c&lHub'
+    Extra1: '&6&lVIP Particles'
+    Extra2: '&3&lFireworks Kit'
+    #Keep in mind that the info book is a readable book.
+    InfoBook:
+        Title: '&2&lInfo'
+        Author: 'Server'
+        #The content represents the text inside the book. 
+        #Each line represents a new page!
+        Content:
+            - ' &5&lCapture The Wool                        &0Game Info                  &8CTW is a team based pvp game similar to capture the flag. There are at least 2 teams.                       Each team must go to the other team base and capture the wools and bring them back to base.   '
+            - '&8The team that captures all the wools and place them back in the base will win.'
+    #This is the message that is sent into the chat when the player interacts with the store hotbar item.
+    #Each line represents a new row.
+    StoreMessage:
+        - ' '
+        - ' &6&lSTORE:&c http://craftersland.buycraft.net/'
+        - '    &7Or do &f/donate &7to check packages.'
+        - ' '
+
+#Achievements names. Full color and format codes support.
+#Codes: http://minecraft.gamepedia.com/Formatting_codes#Color_codes
+Achievements:
+    #Sniper achievement - is rewarded for distance bow kills.
+    Sniper-I: 'Sniper I'
+    Sniper-II: 'Sniper II'
+    Sniper-III: 'Sniper III'
+    Sniper-IV: 'Sniper IV'
+    #Melee Kills achievement - is rewarded for the number of melee kills.
+    Melee-Kills-I: 'Sword Master I'
+    Melee-Kills-II: 'Sword Master II'
+    Melee-Kills-III: 'Sword Master III'
+    Melee-Kills-IV: 'Sword Master IV'
+    #Bow Kills achievement - is rewarded for the number of bow kills.
+    Bow-Kills-I: 'Shooter I'
+    Bow-Kills-II: 'Shooter II'
+    Bow-Kills-III: 'Shooter III'
+    Bow-Kills-IV: 'Shooter IV'
+    #Overpowered achievement - is rewarded for the total amount of kills (melee + bow).
+    Overpowered-I: 'Overpowered I'
+    Overpowered-II: 'Overpowered II'
+    Overpowered-III: 'Overpowered III'
+    Overpowered-IV: 'Overpowered IV'
+    #Wool Master achievement - is rewarded for the amount of wools placed.
+    WoolMaster-I: 'Wool Master I'
+    WoolMaster-II: 'Wool Master II'
+    WoolMaster-III: 'Wool Master III'
+    WoolMaster-IV: 'Wool Master IV'
+
+
+#SCoreboard stats titles. Full color and format codes support.
+#Codes: http://minecraft.gamepedia.com/Formatting_codes#Color_codes
+Scoreboard:
+    #Max length is 32 characters.
+    Titles:
+        Top-Bow-Kills: '&9&lTop Bow Kills'
+        Best-Snipers: '&a&lBest Snipers'
+        Top-Wools-Placed: '&5&lTop Wools Placed'
+        Best-Score: '&6&lBest Score'
+        Top-Melee-Kills: '&4&lTop Melee Kills'
