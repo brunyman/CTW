@@ -1,0 +1,162 @@
+#Database settings
+Database:
+    #Data table name.
+    TableName: 'ctw_scores'
+    #MySQL database type connection details.
+    mysql:
+        host: 127.0.0.1
+        port: 3306
+        databaseName: 'mydatabase'
+        user: 'admin'
+        password: 'cheesecake'
+    #This task will scan the mysql database or flat file storage for inactive players and remove them.
+    #The scanning takes place after server starts with a 2min delay. Runs on a async thread so server performance will not be affected.
+    removeOldUsers:
+        #Enable or disable database maintenance. | (true or false)
+        enabled: false
+        #Inactivity in days. Default 60 days.
+        inactive: 60
+        
+        
+#Capture The Wool Servers
+#Type here all CTW servers names as they are in your BungeeCord config file.
+#The order you add the servers will define the game number.
+Servers:
+- ctw1
+- ctw2
+    
+    
+#Various settings
+Settings:
+    #Delay between updating servers stats in seconds. | Default 2 seconds. Min 1 second.
+    Update-Server-Stats-Delay: 2
+    #The system language. Available options: EN
+    #Info: EN = English
+    #Note: Only English is available at this time! If you translate this to other languages please send me the file and I will add it into the plugin. Thx
+    SystemLanguage: EN
+    #Clear the inventory each time you join the server or re-spawn, before receiving the hot bar items. | true or false
+    ClearInventory: false
+    #Scoreboard top stats settings.
+    ScoreboardStats:
+        #Time to show each scoreboard in seconds. | Default 25 seconds. Min 1 second.
+        Show-Scoreboard: 25
+        #Time between scoreboars when no scoreboard will be visible in milliseconds. | Default 1000 milliseconds (1000 milliseconds = 1 second)
+        No-Scoreaboard: 1000
+        #Time to calculate the top stats data in minutes | Default 5 minutes. Min 1 minute.
+        Update-Tops: 5
+    
+    
+#Hotbar items settings
+HotBar:
+    #The Games menu allows players to join CTW games using a GUI Menu.
+    GamesMenu:
+        #Enable the GameMenu hot bar item | true or false
+        enabled: false
+        #For a list of material names go to: https://goo.gl/wc3LXT
+        material: 'COMPASS'
+        #Hotbar slot | 0 to 8
+        slot: 0
+    #Stats will print in chat the player game stats.
+    Stats:
+        #Enable the Stats hotbar item | true or false
+        enabled: false
+        #For a list of material names go to: https://goo.gl/wc3LXT
+        material: 'PAPER'
+        #Hotbar slot | 0 to 8
+        slot: 1
+    #The info book can hold info about what CTW game is all about.
+    Info:
+        #Enable the Info Book hotbar item | true or false
+        enabled: false
+        #Hotbar slot | 0 to 8
+        slot: 2
+     #Can be used to give players the STORE link.
+    Store:
+        #Enable the Store hotbar item | true or false
+        enabled: false
+        #For a list of material names go to: https://goo.gl/wc3LXT
+        material: 'EMERALD'
+        #Hotbar slot | 0 to 8
+        slot: 3
+    Extra1:
+        #Enable the Extra hotbar item | true or false
+        #You can use this for anything that uses a command. For example open a vip particle effects menu.
+        enabled: false
+        #For a list of material names go to: https://goo.gl/wc3LXT
+        material: 'BLAZE_POWDER'
+        #Right click with this item in your hand to trigger the command.
+        command: '/pp'
+        #Hotbar slot | 0 to 8
+        slot: 4
+    Extra2:
+        #Enable the Extra hotbar item | true or false
+        #You can use this for anything that uses a command. For example open a essentials kit to give some fireworks.
+        enabled: false
+        #For a list of material names go to: https://goo.gl/wc3LXT
+        material: 'FIREWORK'
+        #Right click with this item in your hand to trigger the command.
+        command: '/kit Firework'
+        #Hotbar slot | 0 to 8
+        slot: 5
+    #This can be used to return back to the main hub/lobby.
+    Hub:
+        #Enable the Hub hotbar item | true or false
+        enabled: false
+        #For a list of material names go to: https://goo.gl/wc3LXT
+        material: 'BARRIER'
+        #Right click with this item in your hand to trigger the command.
+        command: '/hub'
+        #Hotbar slot | 0 to 8
+        slot: 8
+
+        
+#Achievements settings
+Achievements:
+    #Sniper achievement - is rewarded for distance bow kills.
+    Sniper:
+        #Distance in blocks required to get the achievement.
+        Distance-For-I: 25
+        Distance-For-II: 35
+        Distance-For-III: 45
+        Distance-For-IV: 55
+    #Melee Kills achievement - is rewarded for the number of melee kills.
+    Melee-Kills:
+        #Melee kills required to get the achievement.
+        Kills-For-I: 50
+        Kills-For-II: 100
+        Kills-For-III: 150
+        Kills-For-IV: 200
+    #Bow Kills achievement - is rewarded for the number of bow kills.
+    Bow-Kills:
+        #Bow kills required to get the achievement.
+        Kills-For-I: 50
+        Kills-For-II: 100
+        Kills-For-III: 150
+        Kills-For-IV: 200
+    #Overpowered achievement - is rewarded for the total amount of kills (melee + bow).
+    Overpowered:
+        #Kills (melee + bow) required to get the achievement.
+        Kills-For-I: 120
+        Kills-For-II: 250
+        Kills-For-III: 500
+        Kills-For-IV: 1000
+    #Wool Master achievement - is rewarded for the amount of wools placed.
+    WoolMaster:
+        #Wools placed required to get the achievement.
+        Wools-For-I: 10
+        Wools-For-II: 22
+        Wools-For-III: 50
+        Wools-For-IV: 100
+    
+    
+#This feature allows you to remove unneeded data when the server shuts down or restarts.
+#For example: Players data, stats, or other plugins that store data as file based and are not needed.
+#As in time the server will store many players data there is a need to clean up unneeded files.
+DataCleanup:
+    #Enable or disabled data clean up | true or false
+    Enabled: false
+    #This can include folders or files. The root directory is the server main folder.
+    CleanUp-Paths:
+        - 'world/playerdata'
+        - 'world/stats'
+    
