@@ -1,3 +1,7 @@
+# English language file for CTWserver
+# version 1.2.0
+
+
 #Chat messages. Full color and format codes support.
 #Codes: http://minecraft.gamepedia.com/Formatting_codes#Color_codes
 ChatMessages:
@@ -210,6 +214,9 @@ TitleMessages:
         title: ''
         subtitle: '&cUnstoppable!'
       
+#Action Bar messages
+ActionBarMessages:
+    SpectatorJoinMessage: '&6Join the game with: &e/join'
       
 #Scoreboard text.
 Scoreboard:
