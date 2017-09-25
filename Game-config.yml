@@ -9,6 +9,7 @@ Database:
         databaseName: 'mydatabase'
         user: 'admin'
         password: 'cheesecake'
+        ssl: false
     #This task will scan the mysql database or flat file storage for inactive players and remove them.
     #The scanning takes place after server starts with a 2min delay. Runs on a async thread so server performance will not be affected.
     removeOldUsers:
