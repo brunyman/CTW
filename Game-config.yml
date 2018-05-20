@@ -35,6 +35,10 @@ Settings:
     #Info: EN = English
     #Note: Only English is available at this time! If you translate this to other languages please send me the file and I will add it into the plugin. Thx
     SystemLanguage: EN
+    #How many games should be played before the server will restart. Set to 0 to disable.
+    #NOTE!!! that the server will auto restart (even with this option disabled) if memory usage goes above 90% and also if the server is online for more then 2h and there are no players online.
+    #Disabling this option does not mean that the server will no longer auto restart. Only disables the condition that the server will restart after a number of games played.
+    ServerRestartAfterGamesPlayed: 0
     #Join message delay in mili-seconds. Set to 0 for no delay. Default value is 2000 (2 seconds, 1000 mili-seconds = 1 second)
     JoinMessageDelay: 2000
     #Enable the sound effects on kill streak messages. I recommend you use the custom sounds, check the plugin page for details.
@@ -56,6 +60,14 @@ Settings:
     AntiCheatIntegration:
         #Support for Advanced Anti Cheat: https://www.spigotmc.org/resources/aac-advanced-anti-cheat-hack-kill-aura-blocker.6442/
         AAC: false
+        
+
+#Chat format with color code support.        
+ChatFormat:
+    Spectator: '&f<TeamPrefix><PlayerName>&7: <Message>'
+    BlueTeam: '&9<TeamPrefix><PlayerName>&7: <Message>'
+    RedTeam: '&c<TeamPrefix><PlayerName>&7: <Message>'
+    GlobalChatCmd: '&f<GlobalPrefix><PlayerName>&7:&f <Message>'
     
     
 #Score and Currency rewards settings.
