@@ -39,6 +39,8 @@ Settings:
     #NOTE!!! that the server will auto restart (even with this option disabled) if memory usage goes above 90% and also if the server is online for more then 2h and there are no players online.
     #Disabling this option does not mean that the server will no longer auto restart. Only disables the condition that the server will restart after a number of games played.
     ServerRestartAfterGamesPlayed: 0
+    #Server will auto restart if memory usage goes above 95%
+    ServerLowMemoryRestart: true
     #Join message delay in mili-seconds. Set to 0 for no delay. Default value is 2000 (2 seconds, 1000 mili-seconds = 1 second)
     JoinMessageDelay: 2000
     #Enable the sound effects on kill streak messages. I recommend you use the custom sounds, check the plugin page for details.
