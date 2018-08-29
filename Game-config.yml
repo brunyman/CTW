@@ -62,9 +62,14 @@ Settings:
     AntiCheatIntegration:
         #Support for Advanced Anti Cheat: https://www.spigotmc.org/resources/aac-advanced-anti-cheat-hack-kill-aura-blocker.6442/
         AAC: false
+    #Plugin modules settings.
+    Modules:
+        #Option to disable the built in chat system, if you want to use another chat plugin.
+        DisableChatModule: false
         
-
-#Chat format with color code support.        
+        
+#Chat format with color code support.
+#Available placeholders: <TeamPrefix> <GlobalPrefix> <PlayerName> <Message> <Coins>
 ChatFormat:
     Spectator: '&f<TeamPrefix><PlayerName>&7: <Message>'
     BlueTeam: '&9<TeamPrefix><PlayerName>&7: <Message>'
