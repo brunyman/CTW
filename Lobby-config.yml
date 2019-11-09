@@ -39,6 +39,8 @@ Settings:
     ClearInventory: false
     #Scoreboard top stats settings.
     ScoreboardStats:
+        #Enable or disable the scoreboard stats. Server restart is required for this.
+        Enabled: true
         #Time to show each scoreboard in seconds. | Default 25 seconds. Min 1 second.
         Show-Scoreboard: 25
         #Time between scoreboars when no scoreboard will be visible in milliseconds. | Default 1000 milliseconds (1000 milliseconds = 1 second)
